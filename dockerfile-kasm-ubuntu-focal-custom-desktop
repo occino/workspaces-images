@@ -52,6 +52,17 @@ RUN bash $INST_SCRIPTS/telegram/install_telegram.sh  && rm -rf $INST_SCRIPTS/tel
 COPY ./src/ubuntu/install/seafile $INST_SCRIPTS/seafile/
 COPY ./src/ubuntu/install/seafile/seafile.desktop $HOME/Desktop/
 RUN bash $INST_SCRIPTS/seafile/install_seafile.sh  && rm -rf $INST_SCRIPTS/seafile/
+
+### Install Terminator
+COPY ./src/ubuntu/install/terminator $INST_SCRIPTS/terminator/
+COPY ./src/ubuntu/install/terminator/terminator.desktop $HOME/Desktop/
+RUN bash $INST_SCRIPTS/terminator/install_terminator.sh  && rm -rf $INST_SCRIPTS/terminator/
+
+### Install Threema
+COPY ./src/ubuntu/install/threema $INST_SCRIPTS/threema/
+COPY ./src/ubuntu/install/threema/threema.desktop $HOME/Desktop/
+RUN bash $INST_SCRIPTS/threema/install_threema.sh  && rm -rf $INST_SCRIPTS/threema/
+
 # CUSTOM END
 
 #ADD ./src/common/scripts $STARTUPDIR
