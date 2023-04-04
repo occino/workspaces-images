@@ -50,6 +50,7 @@ RUN bash $INST_SCRIPTS/telegram/install_telegram.sh  && rm -rf $INST_SCRIPTS/tel
 # CUSTOM START
 ### Install Seafile
 COPY ./src/ubuntu/install/seafile $INST_SCRIPTS/seafile/
+COPY ./src/ubuntu/install/seafile/seafile.desktop $HOME/Desktop/
 RUN bash $INST_SCRIPTS/seafile/install_seafile.sh  && rm -rf $INST_SCRIPTS/seafile/
 # CUSTOM END
 
